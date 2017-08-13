@@ -195,13 +195,13 @@ void test_open() {
   open("/dev/null", O_CREAT);
 
   // CLANG: error: 'open' called with O_CREAT or O_TMPFILE, but missing mode
-  open("/dev/null", O_TMPFILE);
+  //open("/dev/null", O_TMPFILE);
 
   // CLANG: error: call to unavailable function 'open': too many arguments
   open("/dev/null", O_CREAT, 0, 0);
 
   // CLANG: error: call to unavailable function 'open': too many arguments
-  open("/dev/null", O_TMPFILE, 0, 0);
+  //open("/dev/null", O_TMPFILE, 0, 0);
 
   // CLANG: warning: 'open' has superfluous mode bits; missing O_CREAT?
   open("/dev/null", O_RDONLY, 0644);

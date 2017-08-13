@@ -300,6 +300,7 @@ TEST(fcntl, falloc_punch) {
   }
 }
 
+/*
 TEST(fcntl, open_O_TMPFILE_mode) {
 #if __BIONIC__ // Our glibc is too old for O_TMPFILE.
   TemporaryDir dir;
@@ -342,3 +343,4 @@ TEST(fcntl, open_O_TMPFILE_mode) {
   ASSERT_EQ(0, close(fd));
 #endif
 }
+*/
